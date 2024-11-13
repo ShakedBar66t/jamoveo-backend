@@ -1,0 +1,14 @@
+{
+    "veech_shelo": {
+        "id": "veech_shelo",
+        "title": "ואיך שלא",
+        "artist": "אריק איינשטיין",
+        "file": "veech_shelo.json"
+    },
+    "hey_jude": {
+        "id": "hey_jude",
+        "title": "Hey Jude",
+        "artist": "The Beatles",
+        "file": "hey_jude.json"
+    }
+}
