@@ -24,8 +24,8 @@ This is the backend server for JaMoveo, a web app supporting Moveo band rehearsa
 - [ ] External song data fetching via web crawling (Bonus feature)
 
 ## Usage Instructions
-1. **Admin Setup**: Visit the [Admin Login URL](https://jamoveo-backend-q7fv.onrender.com/login) and sign in as an admin to manage sessions.
-2. **Regular User Setup**: Log in as a regular user to join the session and view song details per the instrument role.
+1. **Admin Setup**: Register as an admin at [Admin Signup URL](https://jamoveo-backend-q7fv.onrender.com/signup/admin), then log in to manage sessions.
+2. **Regular User Setup**: Register as a user at [User Signup URL](https://jamoveo-backend-q7fv.onrender.com/signup), then log in to join the session and view song details per the instrument role.
 
 ## Deployment
 The backend is deployed via Render at [https://jamoveo-backend-q7fv.onrender.com](https://jamoveo-backend-q7fv.onrender.com).
