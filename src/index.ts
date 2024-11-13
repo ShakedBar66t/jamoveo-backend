@@ -1,5 +1,5 @@
 import express from 'express';
-import path from 'path'
+import path from 'path';
 import http from 'http';
 import cors from 'cors';
 import admin from 'firebase-admin';
@@ -21,9 +21,13 @@ app.use(cors({
 }));
 app.use(express.json());
 
-admin.initializeApp({
-    credential: admin.credential.cert('serviceAccountKey.json'),
-});
+try {
+    admin.initializeApp({
+        credential: admin.credential.cert(JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT_KEY as string))
+    });
+} catch (error) {
+    console.error('Error initializing Firebase Admin:', error);
+}
 
 app.use(express.static(path.join(__dirname, '../public')))
 

@@ -21,9 +21,14 @@ app.use((0, cors_1.default)({
     origin: '*'
 }));
 app.use(express_1.default.json());
-firebase_admin_1.default.initializeApp({
-    credential: firebase_admin_1.default.credential.cert('serviceAccountKey.json'),
-});
+try {
+    firebase_admin_1.default.initializeApp({
+        credential: firebase_admin_1.default.credential.cert(JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT_KEY))
+    });
+}
+catch (error) {
+    console.error('Error initializing Firebase Admin:', error);
+}
 app.use(express_1.default.static(path_1.default.join(__dirname, '../public')));
 // Routes
 app.use('/api/auth', auth_1.default);
